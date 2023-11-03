@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /definitely_not_the_flag

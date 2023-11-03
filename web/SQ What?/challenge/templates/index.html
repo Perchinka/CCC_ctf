@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: monospace;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        .search-bar {
+            margin-top: 20px;
+        }
+
+        .search-input {
+            width: 70%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: green;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+
+        .results {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+
+    <script>
+        function searchProducts() {
+            var query = document.getElementById('query').value;
+            var resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = "Searching..."; // Display a loading message
+
+            // Make an AJAX request to your Flask server
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    resultsDiv.innerHTML = xhr.responseText; // Display the search results
+                }
+            };
+            xhr.open("GET", "/search?query=" + encodeURIComponent(query), true);
+            xhr.send();
+        }
+    </script>
+</head>
+<body onload="searchProducts()">
+    <div class="container">
+        <h1>Marketplace</h1>
+        <div class="search-bar">
+            <input type="text" class="search-input" id="query" placeholder="Search for products..." onkeydown="if (event.key === 'Enter') searchProducts()">
+            <button class="search-button" onclick="searchProducts()">Search</button>
+        </div>
+        <div class="results" id="results">
+        </div>
+    </div>
+</body>
+</html>

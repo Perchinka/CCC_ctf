@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  
+  pwn-babypwn:
+    build:
+      context: ./pwn/BabyPwn
+    container_name: pwn-babypwn
+    ports:
+      - "1337:9999"
+  
+  pwn-deadbeef:
+    build:
+      context: ./pwn/deadbeef
+    container_name: pwn-deadbeef
+    ports:
+      - "1338:9999"
+  
+  pwn-return-time:
+    build:
+      context: ./pwn/Return Time
+    container_name: pwn-return-time
+    ports:
+      - "1339:9999"
+  
+  web-robots-madness:
+    build:
+      context: ./web/Robots madness
+    container_name: web-robots-madness
+    ports:
+      - "1340:5000"
+  
+  web-sq-what:
+    build:
+      context: ./web/SQ What?
+    container_name: web-sq-what
+    ports:
+      - "1341:5000"
