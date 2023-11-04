@@ -1,25 +1,48 @@
 import random
 
-# Функция для генерации случайного математического примера с скобками
-def generate_complex_example(operators, depth=3):
+
+class Expression:
+    def __init__(self, left, right, op):
+        self.left = left
+        self.right = right
+        self.op = op
+    
+    def __str__(self):
+        return "(" + str(self.left) + " " + str(self.op) + " " + str(self.right) + ")"
+    
+
+class Number:
+    def __init__(self, value):
+        self.value = value
+    
+    def __str__(self):
+        return str(self.value)
+    
+
+class Operator:
+    def __init__(self, value):
+        self.value = value
+    
+    def __str__(self):
+        return str(self.value)
+
+
+def generate_expression(depth):
     if depth == 0:
-        num1 = random.randint(1, 100)
-        num2 = random.randint(1, 100)
-        operator = random.choice(operators)
-        
-        if operator == '/' and num2 == 0:
-            num2 = random.randint(1, 100)
-        
-        return f"{num1} {operator} {num2}"
+        return Number(random.randint(1, 9))
     else:
-        inner_expression = generate_complex_example(operators, depth - 1)
-        return f"({inner_expression}) {random.choice(operators)} ({inner_expression})"
+        left = generate_expression(depth - 1)
+        right = generate_expression(depth - 1)
+        op = Operator(random.choice(["+", "-", "*", "/"]))
+        return Expression(left, right, op)
 
-# Список операторов, ограниченный до +, -, * и /
-operators = ['+', '-', '*', '/']
 
-# Генерация и решение 500 более сложных примеров
-for _ in range(500):
-    example = generate_complex_example(operators, depth=3)
-    solution = str(eval(example))
-    print(f"Пример: {example} = {solution}")
+def evaluate_expression(expr):
+    if isinstance(expr, Number):
+        return expr.value
+    else:
+        left = evaluate_expression(expr.left)
+        right = evaluate_expression(expr.right)
+        op = expr.op.value
+        return eval(str(left) + op + str(right))
+
