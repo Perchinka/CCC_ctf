@@ -1,5 +1,7 @@
-import random
+#!/usr/bin/python3 
 
+import random
+import sys
 
 class Expression:
     def __init__(self, left, right, op):
@@ -46,3 +48,22 @@ def evaluate_expression(expr):
         op = expr.op.value
         return eval(str(left) + op + str(right))
 
+def main():
+    for _ in range(500):
+        expr = generate_expression(random.randint(1,5))
+        #expr = generate_expression(1)
+        print(expr)
+        sys.stdout.flush()
+
+        result = evaluate_expression(expr)
+        user_awswer = sys.stdin.readline().strip()
+        if user_awswer == str(result):
+            continue
+        else:
+            print("U R NOT ROBOT")
+            sys.stdout.flush()
+            exit(1)
+    print("U R ROBOT, here is your flag: CCC{m4th_1s_3z}")
+
+if __name__ == "__main__":
+    main()
