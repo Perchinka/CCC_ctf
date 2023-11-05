@@ -4,7 +4,7 @@ FROM python:3.8-slim
 WORKDIR /app
 
 # Copy the challenge files into the container
-COPY challenge /app
+COPY src /app
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
