@@ -32,9 +32,12 @@ The following categories are available:
    ```
 
 2. Install docker
+    
+    Debian:
     ```sh
     sudo apt install docker.io docker-compose
     ```
+    Arch:
     ```sh
     sudo pacman -S docker docker-compose
     ```
