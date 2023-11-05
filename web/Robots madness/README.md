@@ -4,9 +4,10 @@ Category: web
 ---
 ## Description
 ```
-Our agents have found one of the robots' websites, but they can't understand how the robots distinguish their own from the foes. Help them figure it out.
+Our agents have found one of the robots' websites, but they can't understand how the robots distinguish their own from the foes.
+Help them figure it out.
 
-You might find it useful to read about website design and search engine robots
+You might find it useful to read about **websites structure** and **search engine robots**
 ```
 
 ---
