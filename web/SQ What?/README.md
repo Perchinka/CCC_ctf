@@ -6,7 +6,7 @@ Category: **web**
 ```
 Our agent has gained access to the internal robot database, but cannot find the key. Help him with this
 
-It might be useful for you to know that the agent has figured out the language that the robots use, they call it SQL
+It might be useful for you to know that the agent has figured out the language that the robots use, they call it **SQL**
 ```
 
 ---
