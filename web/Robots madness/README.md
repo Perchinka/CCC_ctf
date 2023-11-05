@@ -12,7 +12,8 @@ You might find it useful to read about **websites structure** and **search engin
 
 ---
 ## Solution
-Open site, find comments in source code:  ```<!-- Переписать потом robots.txt -->``` . Go to ```website_link/robots.txt``` and find there 
+Open site, find comments in source code:  ```<!-- Переписать потом robots.txt -->``` . 
+Go to ```website_link/robots.txt``` and find there 
 ```
 User-agent: *
 Disallow: /definitely_not_the_flag
