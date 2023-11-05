@@ -7,32 +7,39 @@ services:
       context: ./pwn/BabyPwn
     container_name: pwn-babypwn
     ports:
-      - "1337:9999"
+      - "1340:9999"
   
   pwn-deadbeef:
     build:
       context: ./pwn/deadbeef
     container_name: pwn-deadbeef
     ports:
-      - "1338:9999"
+      - "1341:9999"
   
   pwn-return-time:
     build:
       context: ./pwn/Return Time
     container_name: pwn-return-time
     ports:
-      - "1339:9999"
+      - "1342:9999"
   
   web-robots-madness:
     build:
       context: ./web/Robots madness
     container_name: web-robots-madness
     ports:
-      - "1340:5000"
+      - "1343:5000"
   
   web-sq-what:
     build:
       context: ./web/SQ What?
     container_name: web-sq-what
     ports:
-      - "1341:5000"
+      - "1344:5000"
+
+  ppc-robotproof:
+    build:
+      context: ./ppc/RobotProof
+    container_name: ppc-robotproof
+    ports:
+      - "1345:9999"

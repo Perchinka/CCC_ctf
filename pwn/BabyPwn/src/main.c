@@ -11,7 +11,8 @@ int main(){
         printf("Input password:\n");
         scanf("%s", buf);
         if(!strcmp(pass, buf)){
-                printf("Login ok!!! *flag_replaced*\n");
+                printf("Login ok!!!\n"); 
+                system("cat flag.txt");
 	}
         else{ 
                 printf("FAIL...\n");

@@ -6,7 +6,8 @@ void win() {
 	setbuf(stdin, NULL);
 	setbuf(stderr, NULL);
 
-	puts("How did you get here?!\n Ok, get your flag *flag was deleted*");
+	puts("How did you get here?!\n Ok, get your flag");
+	system("cat flag.txt"); 
     return;
 }
 

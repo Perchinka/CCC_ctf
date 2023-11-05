@@ -20,7 +20,7 @@ int main(){
         printf("\nNope, change payload :D \n");
     }
     else{
-        puts("You won, here is you flag");
+        puts("You won, here is your flag");
         system("cat ./flag.txt");
     }
 
