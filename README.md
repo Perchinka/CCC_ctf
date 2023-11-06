@@ -60,6 +60,7 @@ The following categories are available:
 - Each challenge directory contains a `README.md` file with the challenge description and solution
 - Every challenge that requires a server to be run is in its own docker container, so they have their own Dockerfile in challenge directory
 - **src** directory contains all the source code for the challenges
+- **files** directory contains all the files that are needed for the challenges
 
 ### Template for Readme.md
 
