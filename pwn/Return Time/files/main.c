@@ -2,10 +2,6 @@
 #include <stdio.h>
 
 void win() {
-	setbuf(stdout, NULL);
-	setbuf(stdin, NULL);
-	setbuf(stderr, NULL);
-
 	puts("How did you get here?!\n Ok, get your flag");
 	system("cat flag.txt"); 
     return;
@@ -20,6 +16,10 @@ void vulnerable(){
 }
 
 int main() {
+	setbuf(stdout, NULL);
+	setbuf(stdin, NULL);
+	setbuf(stderr, NULL);
+	
 	vulnerable();
 
 	return 0;

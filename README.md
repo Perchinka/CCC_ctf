@@ -70,12 +70,20 @@ Every README.md file follows the following template:
 # Challenge Name
 Category: Category Name
 
+---
 ## Description
 Description of the challenge
 
+---
+## Files
+- [file1](files/file1)
+- [file2](files/file2)
+
+---
 ## Solution
 Solution of the challenge
 
+---
 The flag is: `CCC{flag}`
 ```
 

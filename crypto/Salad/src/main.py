@@ -1,6 +1,6 @@
 from random import randint
 
-flag = "flag is changed"
+flag = "CCC{c43SaR_S4lad}"
 
 def encrypt(text, shift):
     encrypted_text = ""
