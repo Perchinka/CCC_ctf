@@ -16,4 +16,4 @@ But first, just download **example.txt** and read it contents :D
 Flag in txt file
 
 ---
-The flag is: `CCC{h0w_t0_d0wnl04d_th15_f1l3?}`
+The flag is: `CCC{h0w_t0_d0wnl04d_th15_f1l3?!}`
