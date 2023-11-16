@@ -64,6 +64,7 @@ def main():
             sys.stdout.flush()
             exit(1)
     print("U R ROBOT, here is your flag: CCC{m4th_1s_3z}")
+    sys.stdout.flush()
 
 if __name__ == "__main__":
     main()

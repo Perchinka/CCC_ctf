@@ -43,3 +43,19 @@ services:
     container_name: ppc-robotproof
     ports:
       - "1345:9999"
+    
+  tuto-web-tasks:
+    build:
+      context: ./tuto/Web Tasks
+    container_name: tuto-web-tasks
+    ports:
+      - "1346:5000"
+  
+  tuto-net-cat:
+    build:
+      context: ./tuto/net... cat?
+    container_name: tuto-net-cat
+    ports:
+      - "1347:9999"
+    
+  
