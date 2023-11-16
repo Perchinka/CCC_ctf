@@ -36,6 +36,10 @@ def generate_expression(depth):
         left = generate_expression(depth - 1)
         right = generate_expression(depth - 1)
         op = Operator(random.choice(["+", "-", "*", "/"]))
+        try:
+            evaluate_expression(Expression(left, right, op))
+        except ZeroDivisionError:
+            return generate_expression(depth)
         return Expression(left, right, op)
 
 
