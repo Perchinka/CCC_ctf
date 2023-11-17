@@ -6,7 +6,6 @@ int main(){
     setbuf(stdin, NULL);
     setbuf(stderr, NULL);
 
-    int var;
     int check = 0x12341234;
     char buf[40];
 
