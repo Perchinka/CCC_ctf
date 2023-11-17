@@ -2,14 +2,14 @@ FROM ubuntu:16.04
 
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
     apt-get update && apt-get -y dist-upgrade && \
-    apt-get install -y lib32z1 xinetd gcc
+    apt-get install -y xinetd gcc
 
 RUN useradd -m ctf
 
-WORKDIR /home/ctf
-
 RUN cp -R /lib* /home/ctf && \
     cp -R /usr/lib* /home/ctf
+
+WORKDIR /home/ctf
 
 RUN mkdir /home/ctf/dev && \
     mknod /home/ctf/dev/null c 1 3 && \

