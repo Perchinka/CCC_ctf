@@ -1,4 +1,4 @@
-# Maze 1
+# Pipe Maze 2
 Category: ppc
 
 ---
@@ -10,4 +10,4 @@ Description of the challenge
 Solution of the challenge
 
 ---
-The flag is: `CCC{y0u_4r3_4_m4z3_m4573r!}`
+The flag is: `CCC{D3AD_3nD}`

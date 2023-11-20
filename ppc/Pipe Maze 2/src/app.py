@@ -26,7 +26,7 @@ def move_direction(direction):
         new_x, new_y = move(maze, coords[1], coords[0], direction)
         session['coords'] = (new_y, new_x)
         if new_y == end[0] and new_x == end[1]:
-            return jsonify({"success": True, "message": "CCC{y0u_4r3_4_m4z3_m4573r!}"})
+            return jsonify({"success": True, "message": "CCC{D3AD_3nD!}"})
         return jsonify({"success": True, "message": "Moved successfully"})
     else:
         return jsonify({"success": False, "message": "Invalid move"})

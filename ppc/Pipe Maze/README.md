@@ -1,4 +1,4 @@
-# Maze 1
+# Pipe Maze
 Category: ppc
 
 ---
