@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maze</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0; /* Green text */
+            font-family: 'Courier New', monospace; /* Monospace font for hacker style */
+        }
+
+        button {
+            background-color: #008000; /* Green buttons */
+            color: #000; /* Black text for buttons */
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #buttons {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function move(direction) {
+            $.ajax({
+                type: 'POST',
+                url: '/move/' + direction,
+                success: function (response) {
+                    if (response.success) {
+                        if (response.message.includes("CCC")) {
+                            alert("Congratulations! You reached the end. here is your flag: " + response.message);
+                        } else {
+                            updateButtons(); // Update available moves after successful move
+                        }
+                    } else {
+                        console.log(response.message);
+                    }
+                }
+            });
+        }
+
+        function displayButtons(moves) {
+            var buttonsDiv = $('#buttons');
+            buttonsDiv.empty(); // Clear previous buttons
+
+            // Create buttons for available moves
+            if (moves.up) {
+                buttonsDiv.append('<button onclick="move(\'up\')">Up</button>');
+            }
+            if (moves.down) {
+                buttonsDiv.append('<button onclick="move(\'down\')">Down</button>');
+            }
+            if (moves.left) {
+                buttonsDiv.append('<button onclick="move(\'left\')">Left</button>');
+            }
+            if (moves.right) {
+                buttonsDiv.append('<button onclick="move(\'right\')">Right</button>');
+            }
+        }
+
+        function updateButtons() {
+            $.ajax({
+                type: 'POST',
+                url: '/possible_moves',
+                success: function (response) {
+                    if (response.success) {
+                        displayButtons(response.moves);
+                    } else {
+                        console.log(response.message);
+                    }
+                }
+            });
+        }
+
+        updateButtons();
+    </script>
+</head>
+<body>
+    <h1>Maze</h1>
+    <div id="buttons"></div>
+    <div id="end-coords">
+    </div>
+    <br>
+    <div id="current-coords">
+    </div>
+
+    </body>
+</html>

@@ -64,5 +64,12 @@ services:
     container_name: ppc-pipe-maze
     ports:
       - "1348:5000"
+
+  ppc-pipe-maze-2:
+    build:
+      context: ./ppc/Pipe Maze 2
+    container_name: ppc-pipe-maze-2
+    ports:
+      - "1349:5000"
     
   
