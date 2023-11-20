@@ -2,7 +2,7 @@ from pwn import *
 
 path='./files/return_time'
 
-p = remote('localhost', 1342)
+p = remote('alex.lukin.family', 1342)
 # p = process(path)
 binary = ELF(path)
 

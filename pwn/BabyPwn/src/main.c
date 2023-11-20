@@ -6,7 +6,7 @@ int main(){
        	setbuf(stdin, NULL);
        	setbuf(stderr, NULL);
 
-        char pass[9] = "89231456\x00";
+        char pass[9] = "password\x00";
         char buf[9];
         printf("Input password:\n");
         scanf("%s", buf);
