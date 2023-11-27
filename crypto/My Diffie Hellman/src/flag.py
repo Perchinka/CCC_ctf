@@ -1,0 +1,1 @@
+FLAG = b"CCC{0h_n0_my_d1ffie_h3llman_d03snt_w0rk}"
