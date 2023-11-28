@@ -10,6 +10,7 @@ with open("./example_plain", "rb") as f:
 
 with open("./flag_plain", "rb") as f:
     flag_bytes = f.read()
+    
 def encrypt_me(plain_text):
     key_val = b""
     seed_val = plain_text[0]

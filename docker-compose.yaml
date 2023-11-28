@@ -72,4 +72,15 @@ services:
     ports:
       - "1349:5000"
     
+  pwn-inspector-gadget:
+    build:
+      context: ./pwn/Inspector Gadget
+    container_name: pwn-inspector-gadget
+    ports:
+      - "1350:9999"
+    restart: unless-stopped
+    pids_limit: 512
+    mem_limit: 256M
+    read_only: true
+    cpus: 0.5
   

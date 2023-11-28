@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:16.04
 
 RUN sed -i "s/http:\/\/archive.ubuntu.com/http:\/\/mirrors.tuna.tsinghua.edu.cn/g" /etc/apt/sources.list && \
     apt-get update && apt-get -y dist-upgrade && \
