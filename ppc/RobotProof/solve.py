@@ -6,4 +6,4 @@ while True:
     exp = p.recvline()
     print(exp)
     p.sendline(str(eval(exp)).encode())
-    p.recvline()
+   
