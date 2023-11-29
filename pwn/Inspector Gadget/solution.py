@@ -1,8 +1,8 @@
 from pwn import *
 
 context.terminal = ['urxvt', '-e', 'sh', '-c']
-#io = process("./files/vuln_patched")
-io = remote("alex.lukin.family", 1350)
+# io = process("./vuln_patched")
+io = remote("localhost", 1340)
 
 # gdb.attach(io)
 
