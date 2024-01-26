@@ -83,4 +83,16 @@ services:
     mem_limit: 256M
     read_only: true
     cpus: 0.5
+
+  web-hide-and-seek:
+    build:
+      context: ./web/Hide&Seek
+    container_name: web-hide-and-seek
+    ports:
+      - "1351:5000"
+    restart: unless-stopped
+    pids_limit: 512
+    mem_limit: 256M
+    read_only: true
+    cpus: 0.5
   
