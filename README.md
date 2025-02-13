@@ -2,7 +2,7 @@
 
 <p align="center">CTF beginner challenges for <b>Chesterton Comunity College</b> 2023.</p>
 
-You can find deployed tasks here: https://alex.lukin.family/ctf
+You can find deployed tasks here: https://alex.lukin.family/ctf (No, you can not, I've putted server down, sry🥲 )
 
 ## Table of Contents
 
